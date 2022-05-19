@@ -1,0 +1,273 @@
+/* Slider section */
+
+/* to translate the main */
+.mobile-menu-open {
+    transform: translateX(89%);
+
+}
+.carousel .slider-wrapper {
+    max-height: 842px;
+}
+
+.slider .content-slide {
+    position: relative;
+    min-height: 842px;
+}
+.slider .content-slide img {
+  object-fit: cover;
+  min-height: 842px;
+  height: 842px;
+}
+
+.slider .heading { 
+    position: absolute;
+    width: 100%;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.slider .heading h1 { 
+    font-size: 60px;
+    line-height: 24px;
+    color: #fff;
+}
+.slider .heading p { 
+    font-size: 40px;
+
+    margin-top:30px;
+    color: #fff;
+}
+.slider-line { 
+    display: inline-block;
+    background-color: #fff;
+    color: #fff;
+    height: 2px !important;
+    width: 100px;
+    opacity: 1;
+}
+/* Gallery section */
+main .gallery-images-container {
+    overflow: hidden;
+    margin:0;
+    width: 100%;
+    height:  100%;
+    position: relative;
+    cursor:pointer;
+  
+
+}
+.gallery-images-container:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-images-container img {
+    width: 100%;
+    height: calc(100vw / 3);
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.gallery-images-container figcaption {
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 260px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 260px;
+    line-height: 36px;
+    color: #3F3F3F;
+    background: #fff;
+    opacity: 0.9;
+}
+.no-gutters {
+    --bs-gutter-x: 0 !important;
+}
+
+.gallery-images-container .orange-box {
+    color: #fff;
+    opacity: 1 ;
+    background:#D94D39 ;
+    border: 4px solid #FFFFFF ;
+}
+
+/*about us section */
+
+.aboutUs-section {
+    padding-top: 115px;
+    padding-bottom: 124px;
+}
+
+.aboutUs-content-container .logo-orange {
+    margin-bottom: 42px;
+}
+.aboutUs-content-container h2 {
+    font-size: 40px;
+    padding-bottom: 28px;
+    line-height: 40px;
+    color: #D94D39;
+}
+
+.aboutUs-text {
+    color: #7A7A7A;
+    text-transform: uppercase;
+    padding-bottom: 43px;
+}
+
+.aboutUs-button {
+    width: 456px;
+    height: 94px;
+    background: transparent;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #D94D39;
+    border: 2px solid;
+}
+
+.text-green {
+    color: #033333;
+}
+
+
+/*Contact section */
+
+.contact-section {
+        padding-top: 150px;
+        padding-bottom: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('./../../assets/images/boat.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+}
+
+
+.contact-section .form-container form {
+     margin-top: 100px ;
+}
+
+.contact-section .form-container form input {
+    min-width: 628px;
+    border:none;
+    background-color: #FFFFFF;
+    color: #BFBFBF;
+    padding: 22px;
+    margin-right: 12px;
+}
+.contact-section .form-container form button {
+   min-width: 311px;
+   border: 2px solid #EDEDED;
+   background: transparent;
+   color: white;
+   font-size: 20px ;
+   line-height: 24px;
+   padding: 21px 55px;
+
+}
+
+.form-container h2 {
+    font-size: 42px;
+    color: #fff;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    font-size: 20px;
+    color: #fff;
+    line-height: 24px;
+}
+
+ /* responsive */
+@media only screen and (max-width: 769px){
+
+    .slider .heading {     
+        top:60%;
+
+    }
+    .slider .heading h1 { 
+        font-size: 24px;
+ 
+    }
+    .slider .heading p { 
+        font-size: 18px;
+    
+   
+    }
+
+    .slider .content-slide img {
+        height: 100vw;
+        min-height: 100vw;
+    }
+    .slider-line {
+        height: 2px !important;
+        width: 70px;
+    }
+    .gallery-images-container figcaption {
+        font-size: 24px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .gallery-images-container img {
+       height: auto;
+    }
+
+    .aboutUs-section{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    
+    .about-us-text-content {
+        display: none;
+    }
+    .aboutUs-content-container h2 {
+        font-size: 28px;
+        padding-bottom: 0px;
+    }
+    .contact-section {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./../../assets/images/boat.jpg');
+        padding-top: 80px;
+        padding-bottom: 90px;
+
+    }
+    .slider .content-slide {
+        background-color: #000;
+        min-height: 100vw;
+    }
+    .slider .content-slide img {
+        opacity: 0.7;
+    }
+    .contact-section .form-container h2 {
+        font-size: 36px;
+    }
+    .contact-section .form-container p {
+        font-size: 16px;
+    }
+
+    .contact-section .form-container form {
+        min-width: 100%;
+        margin-top: 40px;
+    }
+    .contact-section .form-container form button {
+        min-width: 100%;
+    }
+    .contact-section  form input {
+        min-width: 100% !important;
+        margin-bottom: 12px;
+    }
+}
+@media only screen and (max-width: 569px){ 
+    .gallery-images-container img {
+        height: 375px;
+     }
+
+     
+
+}

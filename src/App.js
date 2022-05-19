@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './Components/Header/Header';
+import Footer from './Components/Footer/Footer';
+import Main from './Components/Main/Main';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [mobileMenuShow, setMobileMenuShow] = useState(false);
+
+  const setMobileMenuTogglerHandler = (isShowed) => {
+    setMobileMenuShow(isShowed);
+
+    
+  }
+  useEffect(() => {
+      if(mobileMenuShow){
+        document.body.style.overflow = 'hidden';
+
+      } else {
+        document.body.style.overflow = '' 
+      }
+  },[mobileMenuShow])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App ${mobileMenuShow && 'disable-scroll'}`}>
+      <Header setMobileMenuToggler = {setMobileMenuTogglerHandler} />
+      <Main mobileMenuShow= {mobileMenuShow} />
+      <Footer />
+   
     </div>
   );
 }
