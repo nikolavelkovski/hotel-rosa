@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [mobileMenuShow, setMobileMenuShow] = useState(false);
-
+  const [reservationShow, setReservationShow] = useState(false)
   const setMobileMenuTogglerHandler = (isShowed) => {
     setMobileMenuShow(isShowed);
 
@@ -23,8 +23,8 @@ function App() {
   },[mobileMenuShow])
 
   return (
-    <div className={`App ${mobileMenuShow && 'disable-scroll'}`}>
-      <Header setMobileMenuToggler = {setMobileMenuTogglerHandler} />
+    <div className={`App ${mobileMenuShow || reservationShow ? 'disable-scroll': ''}`}>
+      <Header setMobileMenuToggler = {setMobileMenuTogglerHandler} setMobileReservationToggler= {() => setReservationShow(true)} />
       <Main mobileMenuShow= {mobileMenuShow} />
       <Footer />
    

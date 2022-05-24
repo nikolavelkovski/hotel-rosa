@@ -2,7 +2,11 @@ import React from 'react'
 import { Container } from 'reactstrap'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
-import { faBook } from '@fortawesome/free-solid-svg-icons'
+import  youtubeImage  from './../../assets/images/youtube.png'
+import  twitterImage  from './../../assets/images/twitter.png'
+import  googlePlusImage  from './../../assets/images/google-plus.png'
+import picasaImage  from './../../assets/images/picasa.png'
+import  facebookImage  from './../../assets/images/facebook.png'
 import './Footer.modules.css'
 export default function Footer() {
   return (
@@ -25,14 +29,24 @@ export default function Footer() {
                 <a href="#">PRIVACY</a>
                 <a href="#">VERSIONE ITALIANA</a>
             </p>
-            <p className='social-links'>
-            <FontAwesomeIcon icon={faBook} />
-            <FontAwesomeIcon icon={faBook} />
-            <FontAwesomeIcon icon={faBook} />
-            <FontAwesomeIcon icon={faBook} />
-            <FontAwesomeIcon icon={faBook} />
+            <div className='social-links'>
+            <figure className="social-links-box">
+            <a href="#"><img src= {facebookImage} alt="facebook mini logo" /></a>
+            </figure>
+            <figure className="social-links-box">
+            <a href="#"><img src= {twitterImage} alt="twitter mini logo" /></a>
+            </figure>
+            <figure className="social-links-box">
+            <a href="#"><img src= {youtubeImage} alt="youtube mini logo" /></a>
+            </figure>
+            <figure className="social-links-box">
+            <a href="#"><img src= {picasaImage} alt="picasa mini logo" /></a>
+            </figure>
+            <figure className="social-links-box">
+            <a href="#"><img src= {googlePlusImage} alt="googlePlus mini logo" /></a>
+            </figure>
 
-            </p>
+            </div>
         </Container>
     </footer>
   )

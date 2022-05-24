@@ -1,5 +1,5 @@
 header {
-    position: fixed;
+    position: absolute;
     width: 100vw;
     z-index: 20;
     padding: 38px 61px;
@@ -192,24 +192,73 @@ header nav {
 
     .mobile-logo {
         position :absolute;
-        right:-2%;
+        right: 0;
 
     }
     .show-menu {
         transform:  translateX(0);
     }
 
+    /* Reservations */
+    .reservation-mobile-section {
+        position: absolute;
+        top: 0;
+        right: 0;   
+        width:90vw;
+        height: 100vh;
+        background: #D94D39;
+        transform: translateX(100%);
+        transition: .6s ease;
+        z-index: 30;
+    }
 
-
-
+    .show-reservations {
+        transform: translateX(0);
+    }
+    .reservation-mobile-section img {
+        float: left;
+        padding: 20px;
+    }
+    
+    .reservation-mobile-section  .reservation-section  {
+        padding-top: 70px;
+    }
+    .reservation-mobile-section  .reservation-section h2 {
+        font-size: 36px;
+    }
+    .reservation-mobile-section  .reservation-section p {
+        font-size: 13px;
+    }
+    .reservation-mobile-section  .reservation-section .info-form  {
+        display: block;
+        margin: 18px auto 0;
+    }
+    .reservation-mobile-section  .reservation-section .info-form .text-field label  {
+        position: absolute;
+        left:13px;
+    }
+    .reservation-mobile-section  .reservation-section .info-form .form-select-boxes {
+        min-height: 26px;
+    }
+    .reservation-mobile-section  .reservation-section .info-form .form-select-boxes img{
+       padding: 12px;
+    }
+    .reservation-mobile-section  .reservation-section .info-form .form-submit-button{
+        background:transparent;
+        color: #fff;
+        border: 1px solid #fff;
+     }
+    
     /* Responsive */
     @media only screen and (max-width: 769px){
         header {
             padding: 5px 10px;
         }
         header .logo-box {
-            width: 65px;
-            height: 65px;
+            width: 30px;
+            height: 50px;
+            margin:0px !important;
+            padding: 0px !important;
         
         }
         .link-item {

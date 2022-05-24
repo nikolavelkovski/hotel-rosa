@@ -8,15 +8,25 @@
 .carousel .slider-wrapper {
     max-height: 842px;
 }
-
+.carousel .control-prev.control-arrow  {
+    left: 5% !important;
+}
+.carousel .control-next.control-arrow  {
+    right: 5% !important;
+}
+.carousel.carousel-slider .control-arrow:hover {
+    background: none !important;
+}
 .slider .content-slide {
     position: relative;
     min-height: 842px;
+    background-color: #000; /* to be removed if needed */
 }
 .slider .content-slide img {
   object-fit: cover;
   min-height: 842px;
   height: 842px;
+  opacity: 0.7; /* to be removed if needed */
 }
 
 .slider .heading { 
@@ -45,6 +55,15 @@
     width: 100px;
     opacity: 1;
 }
+.down-arrow {
+    color: #fff;
+    position: absolute;
+    bottom: -160px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+    opacity: 0.4;
+}
 /* Gallery section */
 main .gallery-images-container {
     overflow: hidden;
@@ -53,18 +72,25 @@ main .gallery-images-container {
     height:  100%;
     position: relative;
     cursor:pointer;
+    background: #000;
   
 
 }
 .gallery-images-container:hover img {
     transform: scale(1.1);
+    opacity: 0.7;
 }
-
+.gallery-images-container:hover figcaption {
+    color: #fff;
+    opacity: 1 ;
+    background:#D94D39 ;
+    border: 4px solid #FFFFFF ;
+}
 .gallery-images-container img {
     width: 100%;
     height: calc(100vw / 3);
     object-fit: cover;
-    transition: 0.4s ease;
+    transition: 0.7s ease;
 }
 
 .gallery-images-container figcaption {
@@ -82,17 +108,18 @@ main .gallery-images-container {
     color: #3F3F3F;
     background: #fff;
     opacity: 0.9;
+    transition: 0.7s ease;
 }
 .no-gutters {
     --bs-gutter-x: 0 !important;
 }
 
-.gallery-images-container .orange-box {
+/* .gallery-images-container .orange-box {
     color: #fff;
     opacity: 1 ;
     background:#D94D39 ;
     border: 4px solid #FFFFFF ;
-}
+} */
 
 /*about us section */
 
@@ -125,13 +152,135 @@ main .gallery-images-container {
     text-transform: uppercase;
     color: #D94D39;
     border: 2px solid;
+    transition: 0.7s ease;
+}
+
+.aboutUs-button:hover {
+    background-color: #D94D39;
+    color:#fff;
 }
 
 .text-green {
     color: #033333;
 }
 
+/* Reservation section */
 
+.reservation-section {
+    background: #D94D39;
+    padding-top: 180px;
+    padding-bottom: 180px;
+}
+.reservation-section h2 {
+    font-size: 50px;
+    color: #fff;
+}
+.reservation-section p {
+    font-size:20px;
+    color: #fff;
+    
+}
+
+ .info-form {
+    margin:120px auto 0;
+    max-width: 940px;
+    color: #fff;
+}
+.info-form .form-input {
+    border-bottom: 1px solid #fff;
+}
+
+.info-form input:focus-visible {
+    outline: none !important;
+}
+
+.info-form  input {
+    font-family: 'Arvo-Bold';
+    color: #fff;
+    background: transparent;
+    border: none;
+    width: 80%;
+}
+
+.info-form .date-input input {
+    width: 60%;
+}
+
+
+.form-select-boxes {
+    position: relative;
+}
+.form-select-boxes label {
+    position: absolute;
+    left: 3px;
+}
+.form-select-boxes img {
+    margin-left: 85%;
+}
+
+.select-menu-display {
+ 
+    width: 50px;
+    position: absolute;
+    right:0;
+    top:-175px;
+    background: #fff;
+    
+}
+.select-menu-display .number {
+    font-size: 20px;
+    color:#949494;
+    padding: 5px;
+    cursor: pointer;
+    border: 5px solid #fff;
+
+}
+.select-menu-display .number:hover {
+    background-color: #e0e0e0;
+    color:#D94D39;
+
+  
+}
+.info-form .selected{
+    border: 5px solid #E9E9E9!important;
+    background-color: #E9E9E9;
+    
+
+
+}
+.info-form .form-submit-button {
+    height: 66px;
+    font-size: 20px;
+    color: #D94D39;
+    background: #fff;
+    border:none;
+    transition: 0.7s ease;
+}
+.info-form .form-submit-button span {
+    display: inline-block;
+    position: relative;
+}
+.info-form .form-submit-button span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    background-color: red;
+    height:2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom right;
+    transition: transform 0.7s ease-out;
+   
+}
+.info-form .form-submit-button:hover span::after {
+   transform: scaleX(1);
+   transform-origin: bottom left;
+   
+}
+.info-form .form-submit-button:hover {
+    transform: scale(1.03);
+}
 /*Contact section */
 
 .contact-section {
@@ -140,7 +289,8 @@ main .gallery-images-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url('./../../assets/images/boat.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./../../assets/images/boat.jpg');
+        /* background-image: url('./../../assets/images/boat.jpg'); */
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -159,6 +309,9 @@ main .gallery-images-container {
     padding: 22px;
     margin-right: 12px;
 }
+.contact-section .form-container form input:focus-visible {
+    outline: none;
+}
 .contact-section .form-container form button {
    min-width: 311px;
    border: 2px solid #EDEDED;
@@ -167,8 +320,16 @@ main .gallery-images-container {
    font-size: 20px ;
    line-height: 24px;
    padding: 21px 55px;
+   transition: 0.7s ease;
 
 }
+
+.contact-section .form-container form button:hover {
+    background-color: #D94D39;
+    color:#fff;
+    border: 2px solid #D94D39;
+}
+
 
 .form-container h2 {
     font-size: 42px;
@@ -185,6 +346,9 @@ main .gallery-images-container {
 
  /* responsive */
 @media only screen and (max-width: 769px){
+    .down-arrow {
+        display: none;
+    }
 
     .slider .heading {     
         top:60%;
@@ -200,6 +364,9 @@ main .gallery-images-container {
    
     }
 
+    .slider .carousel .control-arrow {
+        display: none !important;
+    }
     .slider .content-slide img {
         height: 100vw;
         min-height: 100vw;
@@ -221,6 +388,7 @@ main .gallery-images-container {
     .aboutUs-section{
         padding-top: 50px;
         padding-bottom: 50px;
+        border: 5px solid #D94D39;
     }
 
     
@@ -261,6 +429,13 @@ main .gallery-images-container {
     .contact-section  form input {
         min-width: 100% !important;
         margin-bottom: 12px;
+    }
+
+    .reservation-section .info-form{
+        display: none;
+    }
+    .reservation-section p{
+        display: none;
     }
 }
 @media only screen and (max-width: 569px){ 

@@ -18,6 +18,25 @@ footer h2 {
 
 footer .social-links {
     margin-top:60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .social-links .social-links-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    background: #CFCFCF;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: contain;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+footer .social-links .social-links-box:hover {
+    background: #D94D39;
 }
 
 .footer-contact-info,
@@ -44,7 +63,8 @@ footer .social-links {
     border: none;
     margin: 0 auto 50px;
     background:#D94D39;
-    height: 5px;
+    height: 3px !important;
+    opacity: 0.8 !important;
 }
 
 .links  {
@@ -73,13 +93,18 @@ footer .social-links {
 @media only screen and (max-width: 769px){
      .links {
         flex-wrap: wrap;
+        max-width: 350px;
      }
+
 
      .links a {
          text-align: center;
          margin: 0 auto 10px;
       
         
+     }
+     .links a:last-child {
+         width: 100%;
      }
      footer .content {
         padding-top: 40px;

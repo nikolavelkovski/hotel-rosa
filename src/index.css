@@ -32,3 +32,46 @@ body {
    url("./assets/fonts/Arvo/Arvo-Regular.ttf") format("truetype");
   font-weight: normal;
   }
+
+  @font-face {
+    font-family: "Arvo-Bold";
+    src: local("Arvo"),
+     url("./assets/fonts/Arvo/Arvo-Bold.ttf") format("truetype");
+    font-weight: bold;
+    }
+
+    /*Datepicker styling */
+    .react-datepicker-wrapper {
+      width: 63% !important;
+    }
+    
+    .react-datepicker-wrapper input {
+      width: 100% !important;
+    } 
+
+    .react-datepicker__current-month {
+        padding-top:20px !important;
+        padding-bottom: 12x !important;
+        color: #D94D39 !important;
+        text-transform: uppercase;
+    }
+
+    .react-datepicker__navigation {
+      top:28px !important
+    }
+ .react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+  border-radius: 50% !important;
+  background-color: #D94D39 !important ;
+  color: #fff !important;
+}
+
+.react-datepicker__day-name {
+  text-transform: uppercase !important;
+  font-size: 12px !important;
+  color: #707070 !important;
+
+}
